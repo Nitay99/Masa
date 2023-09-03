@@ -1,9 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-down-icon" viewBox="0 0 16 9"><g fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="angle" viewBox="0 0 20 20"><g fill="none">
+<path d="M20 20C8.95431 20 0 11.0457 0 0V20H20Z" fill="white"/>
+</g></symbol><symbol id="arrow-down-icon" viewBox="0 0 16 9"><g fill="none">
 <path d="M15.272 1.09082L7.99929 7.63628L0.726562 1.09082" stroke="white"/>
 </g></symbol><symbol id="arrow-left-icon" viewBox="0 0 11 12"><g fill="none">
 <path d="M11 5.6875H1M1 5.6875L5.96689 11M1 5.6875L5.96689 1" stroke="#316DC2"/>
 </g></symbol><symbol id="arrow-link-icon" viewBox="0 0 10 10"><g fill="none">
-<path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="white"/>
+<path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="currentcolor"/>
 </g></symbol><symbol id="arrow-right-icon" viewBox="0 0 11 12"><g fill="none">
 <path d="M0 5.6875H10M10 5.6875L5.03311 11M10 5.6875L5.03311 1" stroke="#316DC2"/>
 </g></symbol><symbol id="check-icon" viewBox="0 0 10 8"><g fill="none">

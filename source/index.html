@@ -8,20 +8,153 @@
     <title>Маса</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon/favicon.ico">
+    <link rel="preload" href="fonts/manrope-300.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-500.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
       <header class="main-header">
-        <div class="container"></div>
+        <h1 class="visually-hidden">Маса.</h1>
+        <div class="main-header__img-wrap">
+          <div class="main-header__img main-header__img--internship">
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/jpg/main-slider-photo-1-tablet.webp 1x">
+              <source type="image/webp" srcset="img/jpg/main-slider-photo-1.webp 1x, img/jpg/main-slider-photo-1@2x.webp 2x">
+
+              <source media="(max-width: 1199px)" srcset="img/jpg/main-slider-photo-1-tablet.jpg 1x">
+              <img src="img/jpg/main-slider-photo-1.jpg" width="1440" height="800" alt="Мужчина и две девушки изучают что-то за рабочим столом." srcset="img/jpg/main-slider-photo-1@2x.jpg">
+            </picture>
+          </div>
+          <div class="main-header__img main-header__img--volunteering">
+            <picture>
+              <source type="image/webp" srcset="img/jpg/main-slider-photo-2.webp 1x, img/jpg/main-slider-photo-2@2x.webp 2x">
+
+              <img src="img/jpg/main-slider-photo-2.jpg" loading="lazy" width="1440" height="800" alt="Горы Камчатки." srcset="img/jpg/main-slider-photo-2@2x.jpg">
+            </picture>
+          </div>
+          <div class="main-header__img main-header__img--education">
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/jpg/main-slider-photo-3-tablet.webp 1x, img/jpg/main-slider-photo-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/jpg/main-slider-photo-3.webp 1x, img/jpg/main-slider-photo-3@2x.webp 2x">
+
+              <source media="(max-width: 1199px)" srcset="img/jpg/main-slider-photo-3-tablet.jpg 1x, img/jpg/main-slider-photo-3-tablet@2x.jpg 2x">
+              <img src="img/jpg/main-slider-photo-3.jpg" width="1440" height="800" loading="lazy" alt="Природа Алтая." srcset="img/jpg/main-slider-photo-3@2x.jpg">
+            </picture>
+          </div>
+        </div>
+        <div class="main-header__overlay"></div>
+        <div class="container">
+          <nav class="main-header__nav main-nav">
+            <a href="index.html" class="logo">
+              <img src="img/svg/logo.svg" width="52" height="52" alt="Логотип сайта Маса.">
+            </a>
+          </nav>
+          <div class="main-header__slider-wrap">
+            <div class="main-header__slider swiper">
+              <span class="visually-hidden">Слайдер разных программ компании.</span>
+              <div class="swiper-wrapper">
+                <div class="main-header__slide--internship swiper-slide">
+                  <div class="main-header__pagination-wrap">
+                    <div class="main-header__pagination swiper-pagination">
+                      <span class="visually-hidden">Пагинация слайдера.</span>
+                    </div>
+                    <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                      <use xlink:href="img/sprite.svg#angle"></use>
+                    </svg>
+                  </div>
+                  <div class="main-header__heading">
+                    <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
+                  </div>
+                  <div class="main-header__desc">
+                    <p>
+                      Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.
+                    </p>
+                    <a href="#" class="btn">
+                      Подробнее
+                      <span class="btn__circle">
+                        <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="main-header__angle-icon">
+                      <svg width="26" height="26" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-header__slide--volunteering swiper-slide">
+                  <div class="main-header__pagination-wrap">
+                    <div class="main-header__pagination swiper-pagination">
+                      <span class="visually-hidden">Пагинация слайдера.</span>
+                    </div>
+                    <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                      <use xlink:href="img/sprite.svg#angle"></use>
+                    </svg>
+                  </div>
+                  <div class="main-header__heading">
+                    <h2>Волонтёрские программы – внесите свой вклад в общество</h2>
+                  </div>
+                  <div class="main-header__desc">
+                    <p>
+                      Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.
+                    </p>
+                    <a href="#" class="btn">
+                      Подробнее
+                      <span class="btn__circle">
+                        <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="main-header__angle-icon">
+                      <svg width="26" height="26" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-header__slide--education swiper-slide">
+                  <div class="main-header__pagination-wrap">
+                    <div class="main-header__pagination swiper-pagination">
+                      <span class="visually-hidden">Пагинация слайдера.</span>
+                    </div>
+                    <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                      <use xlink:href="img/sprite.svg#angle"></use>
+                    </svg>
+                  </div>
+                  <div class="main-header__heading">
+                    <h2>Глобальный профессиональный опыт обучения за рубежом</h2>
+                  </div>
+                  <div class="main-header__desc main-header__desc--additional">
+                    <p>
+                      Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!
+                    </p>
+                    <a href="#" class="btn">
+                      Подробнее
+                      <span class="btn__circle">
+                        <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="main-header__angle-icon">
+                      <svg width="26" height="26" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <main class="main-container">
         <section class="about">
           <div class="container">
-            <h1>Маса.</h1>
-            <!-- <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
           </div>
         </section>
         <section class="programs">

@@ -1,26 +1,82 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  align-items: center;
+  padding-top: 3px;
+  padding-right: 4px;
+  padding-bottom: 3px;
+  padding-left: 29px;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  letter-spacing: 0.2px;
+  color: $color-primary;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1em;
+  border-radius: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-primary;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
   @include hover-focus {
-    opacity: 0.8;
+    &:not(.btn--disabled) {
+      outline: none;
+      background-color: $color-primary;
+      color: $color-default-white;
+
+      .btn__circle {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        color: $color-primary;
+        transform: rotate(45deg);
+      }
+    }
   }
+
+  @include active {
+    &:not(.btn--disabled) {
+      background-color: $color-primary;
+      color: rgba($color-default-white, 0.8);
+
+      .btn__circle {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        color: rgba($color-primary, 0.8);
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &--disabled {
+    cursor: default;
+    border-color: $color-mischka;
+    color: $color-mischka;
+    opacity: 0.8;
+
+    .btn__circle {
+      background-color: $color-mischka;
+    }
+  }
+}
+
+.btn__circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  margin-left: 30px;
+
+  background-color: $color-primary;
+  border-radius: 50%;
+}
+
+.btn svg {
+  color: $color-default-white;
 }
