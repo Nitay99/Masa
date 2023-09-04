@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import Swiper, {Pagination} from '../../vendor/swiper';
 
-const headerSlider = document.querySelector('.main-header__slider');
+const headerSlider = document.querySelector('.hero__slider');
 
 const initHeaderSlider = () => {
   Swiper.use([Pagination]);
@@ -27,15 +27,15 @@ const initHeaderSlider = () => {
     breakpoints: {
       // when window width is >= 320px
       320: {
-        spaceBetween: 0,
+        spaceBetween: 20,
         allowTouchMove: true,
       },
       768: {
-        spaceBetween: 0,
+        spaceBetween: 20,
         allowTouchMove: true,
       },
       1200: {
-        spaceBetween: 0,
+        spaceBetween: 20,
         allowTouchMove: false,
       },
     },

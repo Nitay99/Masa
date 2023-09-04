@@ -1,13 +1,10 @@
 .container {
-  display: flex;
-  flex-direction: column;
   width: 86.2%;
-  min-height: 100%;
   max-width: 1240px;
   margin: 0 auto;
 
   @include vp-1199 {
-
+    width: 88.28%;
   }
 
   @include vp-767 {

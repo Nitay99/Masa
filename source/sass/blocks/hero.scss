@@ -1,0 +1,255 @@
+.hero__slider .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: auto;
+}
+
+.hero__pagination-wrap {
+  background-color: $color-default-white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  position: relative;
+  width: max-content;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+
+  @include vp-767 {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    padding-top: 0;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    padding-left: 12px;
+    position: relative;
+    bottom: -5px;
+  }
+}
+
+.hero__pagination-wrap svg {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+
+  @include vp-1199 {
+    right: -19.6px;
+  }
+
+  @include vp-767 {
+    right: -9.4px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.hero__pagination.swiper-pagination {
+  position: relative;
+  width: max-content;
+  top: 0;
+  bottom: 0;
+}
+
+.hero__pagination.swiper-pagination .swiper-pagination-bullet {
+  background-color: $color-transparent;
+  border: 1px solid $color-primary;
+  opacity: 1;
+
+  width: 10px;
+  height: 10px;
+  margin-right: 7.9px;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.hero__pagination.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: $color-primary;
+}
+
+.hero__heading {
+  background-color: $color-default-white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  width: 968px;
+  padding-top: 40px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+
+  @include vp-1199 {
+    width: 97.2%;
+    padding-top: 31px;
+    padding-right: 40px;
+    padding-bottom: 23px;
+    padding-left: 40px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 19px;
+    padding-left: 14px;
+    padding-bottom: 16px;
+    padding-right: 15px;
+    position: relative;
+    bottom: -5px;
+
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+.hero__heading h2 {
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 62px;
+  color: $color-primary;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include vp-1199 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+.hero__desc {
+  background-color: $color-default-white;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 772px;
+  min-height: 89px;
+  padding-top: 0;
+  padding-right: 50px;
+  padding-bottom: 35px;
+  padding-left: 50px;
+
+  &--additional {
+    padding-bottom: 21px;
+  }
+
+  @include vp-1199 {
+    width: 87.2%;
+    padding-right: 40px;
+    padding-bottom: 29px;
+    padding-left: 40px;
+  }
+
+  @include vp-767 {
+    width: 90%;
+    flex-direction: column;
+    padding: 0;
+
+    background-color: $color-transparent;
+  }
+}
+
+.hero__desc p {
+  color: $color-default-dark;
+
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include vp-1199 {
+    line-height: 20px;
+
+    top: -3px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    background-color: $color-default-white;
+    border-bottom-right-radius: 14px;
+
+    padding-right: 14px;
+    padding-bottom: 11px;
+    padding-left: 14px;
+    top: 0;
+  }
+}
+
+.hero__desc--additional p {
+  // top: -7px;
+
+  // @include vp-767 {
+  //   top: 0;
+  // }
+}
+
+.hero__btn-wrap {
+  position: relative;
+  margin-left: 30px;
+
+  @include vp-1199 {
+    align-self: flex-start;
+    top: 0;
+  }
+
+  @include vp-767 {
+    width: 69.8%;
+    margin-left: 0;
+    padding: 10px 15px;
+
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    background-color: $color-default-white;
+  }
+}
+
+.hero__btn-wrap a {
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.hero__btn-wrap .hero__angle-icon {
+  display: none;
+
+  @include vp-767 {
+    top: 0;
+    display: inline-flex;
+  }
+}
+
+.hero__desc--additional .hero__btn-wrap {
+  // top: -7px;
+}
+
+.hero__angle-icon {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  right: -26px;
+  transform: rotate(90deg);
+
+  @include vp-767 {
+    top: 5px;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.hero__angle-icon svg {
+  @include vp-767 {
+    width: 10px;
+    height: 10px;
+  }
+}
