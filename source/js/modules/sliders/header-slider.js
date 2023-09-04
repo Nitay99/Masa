@@ -46,7 +46,7 @@ const initHeaderSlider = () => {
 
   if (headerSlider && headerSlides) {
     headerSlides.forEach((item, index) => {
-      let buttons = item.querySelectorAll('a');
+      let buttons = item.querySelectorAll('a, span');
       if (index === activeIndex + 1) {
         for (let button of buttons) {
           button.setAttribute('tabindex', '0');
@@ -61,7 +61,7 @@ const initHeaderSlider = () => {
     swiper.on('slideChange', () => {
       activeIndex = swiper.realIndex;
       headerSlides.forEach((item, index) => {
-        let buttons = item.querySelectorAll('a');
+        let buttons = item.querySelectorAll('a, span');
         if (index === activeIndex + 1) {
           for (let button of buttons) {
             button.setAttribute('tabindex', '0');
