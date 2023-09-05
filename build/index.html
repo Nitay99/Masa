@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="overlay"></div>
       <header class="main-header">
         <h1 class="visually-hidden">Маса.</h1>
         <div class="main-header__img-wrap">
@@ -54,33 +55,74 @@
         <div class="main-header__overlay"></div>
         <div class="main-header__container">
           <nav class="main-header__nav main-nav">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="main-nav__logo logo">
               <img src="img/svg/logo.svg" width="52" height="52" alt="Логотип сайта Маса.">
             </a>
-            <div class="dropdown-menu">
-              <label for="menu">
+            <div class="main-nav__menu dropdown-menu dropdown-menu--nojs">
+              <input class="visually-hidden dropdown-menu__checkbox dropdown-menu__checkbox--nojs" id="menu" type="checkbox" name="toggle-menu">
+              <label class="dropdown-menu__label" for="menu">
                 Меню
                 <span class="dropdown-menu__circle"></span>
               </label>
-              <input class="visually-hidden" id="menu" type="checkbox" name="toggle-menu">
               <ul class="dropdown-menu__list">
                 <li class="dropdown-menu__item">
                   <a href="#">О проекте</a>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">О проекте</a>
+                  <a href="#">
+                    Программы
+                    <svg width="12" height="6" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                      <use xlink:href="img/sprite.svg#arrow-down-icon"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu__sublist">
+                    <li>
+                      <a href="#">Стажировки</a>
+                    </li>
+                    <li>
+                      <a href="#">Волонтёрство</a>
+                    </li>
+                    <li>
+                      <a href="#">Учёба</a>
+                    </li>
+                    <li>
+                      <a href="#">Религия</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">О проекте</a>
+                  <a href="#">Как поехать</a>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">О проекте</a>
+                  <a href="#">Отзывы</a>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">О проекте</a>
+                  <a href="#">
+                    Новости
+                    <svg width="12" height="6" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                      <use xlink:href="img/sprite.svg#arrow-down-icon"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu__sublist">
+                    <li>
+                      <a href="#">Общее</a>
+                    </li>
+                    <li>
+                      <a href="#">Волонтёрство</a>
+                    </li>
+                    <li>
+                      <a href="#">Стажировки</a>
+                    </li>
+                    <li>
+                      <a href="#">Карьера</a>
+                    </li>
+                    <li>
+                      <a href="#">Путешествия</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">О проекте</a>
+                  <a href="#">Контакты</a>
                 </li>
               </ul>
             </div>
