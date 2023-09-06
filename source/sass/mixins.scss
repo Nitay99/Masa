@@ -31,13 +31,21 @@
     }
   }
 
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-state {
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      @content;
+    }
+  }
+
   &:focus {
     @content;
   }
-
-  // &.focus-visible:focus {
-  //   @content;
-  // }
 }
 
 // Desktop first
