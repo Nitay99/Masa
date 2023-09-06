@@ -1,0 +1,23 @@
+.social-list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 204px;
+  gap: 20px;
+
+  list-style-type: none;
+}
+
+.social-list__item a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+
+  background-color: $color-primary;
+  border-radius: 50%;
+}

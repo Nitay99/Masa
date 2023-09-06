@@ -1,6 +1,6 @@
 const menu = document.querySelector('.dropdown-menu');
 const checkbox = menu ? menu.querySelector('input') : false;
-const menuLinks = menu ? menu.querySelectorAll('a') : false;
+const menuLinks = menu ? menu.querySelectorAll('.dropdown-menu__link') : false;
 const overlay = document.querySelector('.overlay');
 
 if (menu) {
@@ -8,8 +8,7 @@ if (menu) {
 }
 
 if (checkbox) {
-  checkbox.classList.remove('dropdown-menu__checkbox--nojs');
-
+  checkbox.disabled = false;
   checkbox.addEventListener('keydown', (evt) => {
     if (evt.key === 'Enter') {
       if (checkbox.checked) {

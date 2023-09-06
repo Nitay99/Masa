@@ -1,5 +1,5 @@
 .main-header {
-  background-color: $color-primary;
+  background-color: $color-additional-back;
 
   padding-top: 30px;
   padding-bottom: 60px;
@@ -11,17 +11,41 @@
     .main-header__img--internship {
       opacity: 1;
     }
+
+    .main-header__img--volunteering {
+      opacity: 0;
+    }
+
+    .main-header__img--education {
+      opacity: 0;
+    }
   }
 
   &:has(.hero__slide--volunteering.swiper-slide-active) {
     .main-header__img--volunteering {
       opacity: 1;
     }
+
+    .main-header__img--internship {
+      opacity: 0;
+    }
+
+    .main-header__img--education {
+      opacity: 0;
+    }
   }
 
   &:has(.hero__slide--education.swiper-slide-active) {
     .main-header__img--education {
       opacity: 1;
+    }
+
+    .main-header__img--volunteering {
+      opacity: 0;
+    }
+
+    .main-header__img--internship {
+      opacity: 0;
     }
   }
 
@@ -72,6 +96,10 @@
   transition: all 0.5s;
 }
 
+.main-header__img--internship {
+  opacity: 1;
+}
+
 .main-header__img img {
   width: 100%;
   height: 100%;
@@ -91,6 +119,12 @@
 
 .main-header__nav {
   position: relative;
+}
+
+.main-header__logo {
+  @include vp-767 {
+    position: absolute;
+  }
 }
 
 .main-header__slider-wrap {

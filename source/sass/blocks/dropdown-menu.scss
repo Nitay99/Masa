@@ -7,7 +7,44 @@
   transition: all 0.5s;
 }
 
-.dropdown-menu:has(input[type="checkbox"]:checked) {
+.dropdown-menu:has(.dropdown-menu__checkbox[type="checkbox"]:checked) {
+  width: 286.5px;
+
+  .dropdown-menu__item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 13.5px;
+  }
+
+  .dropdown-menu__label {
+    background-color: $color-primary;
+    color: $color-default-white;
+  }
+
+  .dropdown-menu__circle {
+    background-color: $color-default-white;
+  }
+
+  .dropdown-menu__circle::before {
+    height: 1.5px;
+    background-color: $color-primary;
+    border: none;
+    transform: rotate(45deg);
+  }
+
+  .dropdown-menu__circle::after {
+    background-color: $color-primary;
+    transform: rotate(-45deg);
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.dropdown-menu--nojs {
   width: 286.5px;
 
   .dropdown-menu__item {
@@ -140,15 +177,26 @@
 
 .dropdown-menu--nojs {
   .dropdown-menu__list {
-    position: relative;
-    max-height: 500px;
+    max-height: 80vh;
+    padding-top: 29px;
+    padding-right: 25px;
+    padding-bottom: 13px;
+    padding-left: 25px;
+
     font-size: 16px;
+
+    @include vp-767 {
+      position: relative;
+    }
+  }
+
+  .dropdown-menu__item {
+    display: flex;
   }
 }
 
 .dropdown-menu__item {
   display: none;
-
 }
 
 .dropdown-menu__item:has(.dropdown-menu__sublist) {
@@ -225,8 +273,6 @@
   }
 }
 
-
-
 .dropdown-menu__item a {
   display: flex;
   width: max-content;
@@ -278,25 +324,11 @@
   }
 }
 
-// .dropdown-menu__sublist li {
-//   display: none;
-// }
-
-.dropdown-menu__sublist {
-  // &:has(a:hover) {
-  //   max-height: 100vh;
-  //   padding-left: 16px;
-  //   margin-top: 6px;
-
-  //   font-size: 16px;
-
-  //   .dropdown-menu__sublist li {
-  //     display: flex;
-  //   }
-  // }
+.dropdown-menu__item:has(.dropdown-menu__sublist) {
+  width: max-content;
 }
 
-.dropdown-menu input[type="checkbox"]:checked ~ .dropdown-menu__list {
+.dropdown-menu__checkbox:checked ~ .dropdown-menu__list {
   max-height: 80vh;
   padding-top: 29px;
   padding-right: 25px;
@@ -306,7 +338,7 @@
   font-size: 16px;
 }
 
-.dropdown-menu input[type="checkbox"] {
+.dropdown-menu__checkbox {
   @include focus {
     ~ .dropdown-menu__label {
       color: $color-default-white;

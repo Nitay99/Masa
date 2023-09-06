@@ -31,9 +31,13 @@
     }
   }
 
-  &.focus-visible:focus {
+  &:focus {
     @content;
   }
+
+  // &.focus-visible:focus {
+  //   @content;
+  // }
 }
 
 // Desktop first

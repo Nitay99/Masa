@@ -55,18 +55,18 @@
         <div class="main-header__overlay"></div>
         <div class="main-header__container">
           <nav class="main-header__nav main-nav">
-            <a href="index.html" class="main-nav__logo logo">
+            <a href="index.html" class="main-header__logo main-nav__logo logo">
               <img src="img/svg/logo.svg" width="52" height="52" alt="Логотип сайта Маса.">
             </a>
             <div class="main-nav__menu dropdown-menu dropdown-menu--nojs">
-              <input class="visually-hidden dropdown-menu__checkbox dropdown-menu__checkbox--nojs" id="menu" type="checkbox" name="toggle-menu">
+              <input disabled class="visually-hidden dropdown-menu__checkbox" id="menu" type="checkbox" name="toggle-menu">
               <label class="dropdown-menu__label" for="menu">
                 Меню
                 <span class="dropdown-menu__circle"></span>
               </label>
               <ul class="dropdown-menu__list">
                 <li class="dropdown-menu__item">
-                  <a href="#">О проекте</a>
+                  <a class="dropdown-menu__link" href="#">О проекте</a>
                 </li>
                 <li class="dropdown-menu__item">
                   <a href="#">
@@ -77,24 +77,24 @@
                   </a>
                   <ul class="dropdown-menu__sublist">
                     <li>
-                      <a href="#">Стажировки</a>
+                      <a class="dropdown-menu__link" href="#">Стажировки</a>
                     </li>
                     <li>
-                      <a href="#">Волонтёрство</a>
+                      <a class="dropdown-menu__link" href="#">Волонтёрство</a>
                     </li>
                     <li>
-                      <a href="#">Учёба</a>
+                      <a class="dropdown-menu__link" href="#">Учёба</a>
                     </li>
                     <li>
-                      <a href="#">Религия</a>
+                      <a class="dropdown-menu__link" href="#">Религия</a>
                     </li>
                   </ul>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">Как поехать</a>
+                  <a class="dropdown-menu__link" href="#">Как поехать</a>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">Отзывы</a>
+                  <a class="dropdown-menu__link" href="#">Отзывы</a>
                 </li>
                 <li class="dropdown-menu__item">
                   <a href="#">
@@ -105,24 +105,24 @@
                   </a>
                   <ul class="dropdown-menu__sublist">
                     <li>
-                      <a href="#">Общее</a>
+                      <a class="dropdown-menu__link" href="#">Общее</a>
                     </li>
                     <li>
-                      <a href="#">Волонтёрство</a>
+                      <a class="dropdown-menu__link" href="#">Волонтёрство</a>
                     </li>
                     <li>
-                      <a href="#">Стажировки</a>
+                      <a class="dropdown-menu__link" href="#">Стажировки</a>
                     </li>
                     <li>
-                      <a href="#">Карьера</a>
+                      <a class="dropdown-menu__link" href="#">Карьера</a>
                     </li>
                     <li>
-                      <a href="#">Путешествия</a>
+                      <a class="dropdown-menu__link" href="#">Путешествия</a>
                     </li>
                   </ul>
                 </li>
                 <li class="dropdown-menu__item">
-                  <a href="#">Контакты</a>
+                  <a class="dropdown-menu__link" href="#">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -150,11 +150,11 @@
                     <div class="hero__btn-wrap">
                       <a href="#" class="btn">
                         Подробнее
-                        <span class="btn__circle">
+                        <div class="btn__circle">
                           <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
                             <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
                           </svg>
-                        </span>
+                        </div>
                       </a>
                       <div class="hero__angle-icon">
                         <svg width="26" height="26" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
@@ -188,11 +188,11 @@
                     <div class="hero__btn-wrap">
                       <a href="#" class="btn">
                         Подробнее
-                        <span class="btn__circle">
+                        <div class="btn__circle">
                           <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
                             <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
                           </svg>
-                        </span>
+                        </div>
                       </a>
                       <div class="hero__angle-icon">
                         <svg width="26" height="26" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
@@ -226,11 +226,11 @@
                     <div class="hero__btn-wrap">
                       <a href="#" class="btn">
                         Подробнее
-                        <span class="btn__circle">
+                        <div class="btn__circle">
                           <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
                             <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
                           </svg>
-                        </span>
+                        </div>
                       </a>
                       <div class="hero__angle-icon">
                         <svg width="26" height="26" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
@@ -278,7 +278,60 @@
         </section>
       </main>
       <footer class="main-footer">
-        <div class="container"></div>
+        <div class="container">
+          <nav class="main-nav">
+            <a href="index.html" class="main-header__logo main-nav__logo logo">
+              <img src="img/svg/logo.svg" width="52" height="52" alt="Логотип сайта Маса.">
+            </a>
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a href="#">О проекте</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#">Программы</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#">Как поехать</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="main-nav__social social-list">
+              <li class="social-list__item">
+                <a href="#" aria-label="Вконтакте.">
+                  <svg width="16" height="10" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                    <use xlink:href="img/sprite.svg#vk-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" aria-label="Одноклассники.">
+                  <svg width="10" height="16" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                    <use xlink:href="img/sprite.svg#odnoklassniki-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" aria-label="Реддит.">
+                  <svg width="16" height="16" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                    <use xlink:href="img/sprite.svg#reddit-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="main-footer__row">
+            <span class="main-footer__copyright">Masa © 2023 Все права защищены</span>
+            <a href="#" class="main-footer__privacy privacy">Политика конфиденциальности</a>
+          </div>
+        </div>
       </footer>
     </div>
 
