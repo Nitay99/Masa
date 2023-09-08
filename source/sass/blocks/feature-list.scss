@@ -15,6 +15,22 @@
   background-color: $color-primary;
   border-radius: 20px;
   list-style-type: none;
+
+  @include vp-1199 {
+    padding-top: 62px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    column-gap: 50px;
+    row-gap: 42px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 22px;
+    padding-top: 42px;
+    padding-right: 20px;
+    padding-left: 30px;
+  }
 }
 
 .feature-list__item {
@@ -25,18 +41,38 @@
   align-items: center;
   column-gap: 8px;
   padding-top: 30px;
-  padding-right: 12px;
+  padding-right: 18px;
   padding-bottom: 28px;
-  padding-left: 26px;
+  padding-left: 29px;
 
   border: 1px solid $color-default-white;
   border-radius: 16px;
   color: $color-default-white;
 
   &--additional {
-    column-gap: 20px;
-    padding-right: 10px;
-    padding-left: 33px;
+    column-gap: 19px;
+    padding-right: 26px;
+    padding-left: 40px;
+  }
+
+  @include vp-1199 {
+    width: 40.2%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 25px;
+
+    &--additional {
+      padding-left: 29px;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 19.5px;
+    padding-right: 15px;
+    padding-bottom: 23px;
+    padding-left: 19px;
   }
 }
 
@@ -53,9 +89,15 @@
   background-color: $color-primary;
 }
 
+.feature-list__img-star svg {
+  @include vp-767 {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .feature-list__item h3 {
   margin-top: 0;
-  // margin-right: 10px;
   margin-bottom: 0;
   max-width: 172px;
 
@@ -64,6 +106,23 @@
   font-size: 26px;
   line-height: 30px;
   text-transform: uppercase;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 22px;
+
+    max-width: 133px;
+    margin-bottom: 7.5px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+
+    max-width: none;
+    margin-bottom: 4px;
+  }
 }
 
 .feature-list__item p {
@@ -73,5 +132,15 @@
 
   font-weight: 300;
   line-height: 20px;
+
+  @include vp-1199 {
+    width: 91%;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+
+    width: 83%;
+  }
 }
 
