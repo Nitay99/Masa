@@ -1,0 +1,78 @@
+.application-form h3 {
+  color: $color-primary;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.application-form p {
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.application-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.application-form__field {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+
+.application-form__field label {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($color-default-dark, 0.8);
+
+  margin-bottom: 12px;
+}
+
+.application-form__field input[name="contact"] {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba($color-default-dark, 0.3);
+  border-radius: 8px;
+
+  padding: 15px 25px;
+
+  &:not(:disabled) {
+    @include hover-focus {
+      border-color: $color-default-dark;
+      outline: none;
+
+      ~ label {
+        color: $color-default-dark;
+      }
+    }
+  }
+
+  &:disabled {
+    border-color: rgba($color-mischka, 0.5);
+    background-color: rgba($color-mischka, 0.2);
+
+    ~ label {
+      color: rgba($color-mischka, 0.6);
+    }
+  }
+}
+
+.application-form__field.is-invalid input[name="contact"] {
+  border-color: $color-error;
+  background-color: rgba($color-error, 0.2);
+
+  ~ label {
+    color: $color-default-dark;
+  }
+}
+
+.application-form button[type="submit"] {
+  align-self: center;
+}

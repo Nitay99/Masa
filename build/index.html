@@ -131,7 +131,7 @@
             <div class="hero__slider swiper">
               <span class="visually-hidden">Слайдер разных программ компании.</span>
               <div class="swiper-wrapper">
-                <div class="hero__slide--internship swiper-slide">
+                <div class="hero__slide hero__slide--internship swiper-slide">
                   <div class="hero__pagination-wrap">
                     <div class="hero__pagination swiper-pagination">
                       <span class="visually-hidden">Пагинация слайдера.</span>
@@ -169,7 +169,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hero__slide--volunteering swiper-slide">
+                <div class="hero__slide hero__slide--volunteering swiper-slide">
                   <div class="hero__pagination-wrap">
                     <div class="hero__pagination swiper-pagination">
                       <span class="visually-hidden">Пагинация слайдера.</span>
@@ -207,7 +207,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hero__slide--education swiper-slide">
+                <div class="hero__slide hero__slide--education swiper-slide">
                   <div class="hero__pagination-wrap">
                     <div class="hero__pagination swiper-pagination">
                       <span class="visually-hidden">Пагинация слайдера.</span>
@@ -395,21 +395,43 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+          <div class="application-form" data-form-validate="" data-callback="base">
+            <h3>Напишите нам</h3>
+            <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="application-form__field" data-validate-type="text" data-limitation="name" data-required="">
+                <input type="text" name="contact" id="name" required>
+                <label for="name">Имя</label>
+              </div>
+              <div class="application-form__field" data-validate-type="phone" data-required="" data-phone-length="18">
+                <input type="tel" name="contact" id="tel" required>
+                <label for="tel">Телефон</label>
+              </div>
+              <div class="custom-select" data-select>
+                <span class="custom-select__error">some-error</span>
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span>
+                  <span class="custom-select__icon"></span>
+                </button>
+                <ul class="custom-select__list">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1">example-1</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-2">example-2</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-3">example-3</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4">example-4</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-5">example-5</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-6">example-6</li>
+                </ul>
+              </div>
+              <button class="btn" type="submit">
+                отправить
+                <span class="btn__circle">
+                  <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                    <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
               <use xlink:href="img/sprite.svg#icon-close"></use>

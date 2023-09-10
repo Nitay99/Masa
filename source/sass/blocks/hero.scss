@@ -1,8 +1,14 @@
-.hero__slider .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: auto;
+.hero__slider {
+  height: min-content;
+}
+
+.hero__slider .swiper-wrapper {
+  align-items: flex-end;
+  height: min-content;
+}
+
+.hero__slide {
+  height: min-content;
 }
 
 .hero__pagination-wrap {
