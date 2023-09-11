@@ -91,6 +91,13 @@
   }
 }
 
+.btn__text {
+  @include vp-767 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .btn svg {
   color: $color-default-white;
 }

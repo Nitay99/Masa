@@ -60,30 +60,73 @@
     position: relative;
 
     width: 510px;
-    padding: 53px 80px;
+    padding: 53px 80px 60.4px;
 
     background-color: $color-default-white;
     border-radius: 16px;
 
+    @include vp-1199 {
+      padding: 56px 80px 59.4px;
+    }
+
     @include vp-767 {
+      padding: 37px 15px 40.4px;
       width: 100%;
-      padding: 20px;
     }
   }
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 29px;
+    right: 28px;
     z-index: 1;
 
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     padding: 0;
 
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      content: "";
+      width: 1px;
+      height: 24.5px;
+
+      background-color: $color-primary;
+
+      @include vp-767 {
+        height: 16px;
+        right: auto;
+      }
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    @include hover-focus {
+      &::before,
+      &::after {
+        background-color: rgba($color-primary, 0.6);
+      }
+    }
+
+    @include vp-767 {
+      width: 16px;
+      height: 16px;
+      top: 20px;
+      right: 20px;
+    }
   }
 
   &--responsive {

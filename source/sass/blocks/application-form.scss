@@ -1,3 +1,8 @@
+.application-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .application-form h3 {
   color: $color-primary;
   font-weight: 400;
@@ -7,13 +12,40 @@
 
   margin-top: 0;
   margin-bottom: 8px;
+
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 1em;
+
+    margin-bottom: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+
+    margin-bottom: 7px;
+  }
 }
 
 .application-form p {
   text-align: center;
 
   margin-top: 0;
-  margin-bottom: 19px;
+  margin-bottom: 18px;
+
+  @include vp-1199 {
+    line-height: 20px;
+
+    margin-bottom: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+
+    width: 81%;
+    align-self: center;
+    margin-bottom: 18px;
+  }
 }
 
 .application-form form {
@@ -25,16 +57,23 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
 }
 
 .application-form label {
   font-size: 14px;
   line-height: 18px;
   opacity: 0.8;
-  // color: rgba($color-default-dark, 0.8);
 
   order: -1;
   margin-bottom: 8px;
+
+  @include vp-767 {
+    margin-bottom: 7px;
+  }
 }
 
 .application-form__field input[name="contact"] {
@@ -44,6 +83,7 @@
   border-radius: 8px;
 
   padding: 15px 25px;
+  height: 50px;
 
   &:not(:disabled) {
     @include hover-focus {
@@ -65,6 +105,11 @@
       color: rgba($color-mischka, 0.6);
     }
   }
+
+  @include vp-767 {
+    padding: 10px 25px;
+    height: 44px;
+  }
 }
 
 .application-form__field.is-invalid input[name="contact"] {
@@ -78,11 +123,20 @@
 
 .application-form button[type="submit"] {
   align-self: center;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .application-form__select {
   display: flex;
   flex-direction: column;
+  margin-bottom: 6px;
+
+  @include vp-767 {
+    margin-bottom: 1px;
+  }
 }
 
 .application-form__select.is-open label {
@@ -91,5 +145,13 @@
 
 .application-form__select.is-open button[type="button"] {
   border-color: $color-default-dark;
+}
+
+.application-form__checkbox {
+  margin-bottom: 23px;
+
+  @include vp-767 {
+    margin-bottom: 18px;
+  }
 }
 

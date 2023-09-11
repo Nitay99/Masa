@@ -397,18 +397,17 @@
         <div class="modal__content">
           <div class="application-form" data-form-validate="" data-callback="base">
             <h3>Напишите нам</h3>
-            <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
+            <p>Оставьте ваши контакты, если&nbsp;у вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <div class="application-form__field" data-validate-type="text" data-limitation="name" data-required="">
                 <input type="text" name="contact" id="name" required>
                 <label for="name">Имя</label>
               </div>
-              <div class="application-form__field" data-validate-type="phone" data-required="" data-phone-length="18">
+              <div class="application-form__field" data-validate-type="phone" data-phone-length="18" data-required="">
                 <input type="tel" name="contact" id="tel" required>
                 <label for="tel">Телефон</label>
               </div>
-              <div class="application-form__select custom-select" data-select>
-                <span class="custom-select__error">some-error</span>
+              <div class="application-form__select custom-select" data-validate-type="select" data-select data-required="">
                 <button id="select" class="custom-select__button" type="button" aria-label="Выберите одну из опций">
                   <span class="custom-select__text"></span>
                   <span class="custom-select__icon"></span>
@@ -421,8 +420,19 @@
                   <li class="custom-select__item" tabindex="0" data-select-value="id-4">Санкт-Петербург</li>
                 </ul>
               </div>
+              <div class="application-form__checkbox checkbox" data-validate-type="checkbox" data-required="">
+                <input class="visually-hidden" id="policy-checkbox" type="checkbox" name="policy" value="agreement">
+                <label for="policy-checkbox">
+                  <span class="checkbox__icon">
+                    <svg width="10" height="8" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                      <use xlink:href="img/sprite.svg#check-icon"></use>
+                    </svg>
+                  </span>
+                  Я согласен на обработку моих персональных данных
+                </label>
+              </div>
               <button class="btn" type="submit">
-                отправить
+                <span class="btn__text">отправить</span>
                 <span class="btn__circle">
                   <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
                     <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
@@ -431,11 +441,7 @@
               </button>
             </form>
           </div>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal></button>
         </div>
       </div>
     </div>
