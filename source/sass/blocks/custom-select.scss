@@ -1,14 +1,9 @@
 .custom-select {
   position: relative;
 
-  width: 300px;
-  padding: 14px 0 28px;
+  width: 100%;
+  padding: 0 0 14px;
   margin: 0 0 44px 0;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
-  }
 
   &__label {
     position: absolute;
@@ -63,23 +58,28 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 48px;
-    padding: 5px 10px;
+    height: 50px;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-left: 18px;
 
     background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba($color-default-dark, 0.3);
+    border-radius: 8px;
     outline: none;
     cursor: pointer;
 
     transition: border 0.3s ease;
 
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
-    }
+    @include hover-focus {
+      border-color: $color-default-dark;
 
-    &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
+      ~ label {
+        opacity: 1;
+      }
     }
 
     &:disabled {
@@ -94,7 +94,7 @@
     z-index: 1;
 
     width: 100%;
-    max-height: 100px;
+    max-height: 194px;
     margin: 0;
     padding: 0;
     overflow-y: auto;
@@ -102,7 +102,8 @@
     list-style: none;
 
     background-color: #ffffff;
-    border: 2px solid #000000;
+    border: 1px solid $color-default-dark;
+    border-radius: 8px;
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;
@@ -111,35 +112,40 @@
   }
 
   &__item {
-    padding: 5px;
+    padding: 11px 19px;
 
     outline: none;
     cursor: pointer;
+    font-size: 14px;
+    color: $color-default-dark;
 
     transition: background-color 0.3s ease;
 
     &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: $color-primary;
+      color: $color-default-white;
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
+          color: $color-default-white;
         }
       }
 
       &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: $color-primary;
+        color: $color-default-white;
       }
     }
 
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
+        color: $color-primary;
       }
     }
 
     &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: $color-primary;
+      color: $color-default-white;
     }
   }
 
@@ -156,8 +162,8 @@
   }
 
   &__text {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 14px;
     flex-shrink: 0;
     width: 80%;
     overflow: hidden;
@@ -177,11 +183,11 @@
 
   &__icon {
     flex-shrink: 0;
-    width: 20px;
-    height: 10px;
+    width: 15px;
+    height: 8px;
     margin-left: auto;
 
-    background-color: #000000;
+    background-color: $color-default-dark;
 
     transition: transform 0.3s ease;
 
