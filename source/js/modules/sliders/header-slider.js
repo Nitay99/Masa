@@ -13,7 +13,7 @@ const initHeaderSlider = () => {
 
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+      el: '.hero__pagination',
       clickable: true,
     },
 

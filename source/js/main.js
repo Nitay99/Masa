@@ -2,8 +2,9 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
-import {initHeaderSlider} from './modules/sliders/header-slider';
 import {setMenuClickHandler} from './modules/menu';
+import {initHeaderSlider} from './modules/sliders/header-slider';
+import {initProgramSlider} from './modules/sliders/program-slider';
 
 // ---------------------------------
 
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   initHeaderSlider();
+  initProgramSlider();
   setMenuClickHandler();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

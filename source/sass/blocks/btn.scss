@@ -23,6 +23,21 @@
   transition: opacity $trans-default;
 
   @include hover-focus {
+    &:not(:disabled) {
+      outline: none;
+      background-color: $color-primary;
+      color: $color-default-white;
+
+      .btn__circle {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        color: $color-primary;
+        transform: rotate(45deg);
+      }
+    }
+
     &:not(.btn--disabled) {
       outline: none;
       background-color: $color-primary;
@@ -40,18 +55,43 @@
   }
 
   @include active {
-    &:not(.btn--disabled) {
+    &:not(:disabled) {
       background-color: $color-primary;
-      color: rgba($color-default-white, 0.8);
+      color: rgba($color-default-white, 0.7);
 
       .btn__circle {
         background-color: $color-default-white;
       }
 
       svg {
-        color: rgba($color-primary, 0.8);
+        color: rgba($color-primary, 0.7);
         transform: rotate(45deg);
       }
+    }
+
+    &:not(.btn--disabled) {
+      background-color: $color-primary;
+      color: rgba($color-default-white, 0.7);
+
+      .btn__circle {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        color: rgba($color-primary, 0.7);
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    border-color: $color-mischka;
+    color: $color-mischka;
+    opacity: 0.8;
+
+    .btn__circle {
+      background-color: $color-mischka;
     }
   }
 
@@ -71,6 +111,36 @@
 
     padding-left: 20px;
   }
+
+  &--without-text {
+    padding: 0;
+    border: none;
+
+    @include hover-focus {
+      &:not(:disabled) {
+        background-color: $color-default-white;
+      }
+
+      &:not(.btn--disabled) {
+        background-color: $color-default-white;
+      }
+    }
+
+    @include active {
+      &:not(:disabled) {
+        background-color: $color-default-white;
+      }
+
+      &:not(.btn--disabled) {
+        background-color: $color-default-white;
+      }
+    }
+
+    .btn__circle {
+      min-width: 30px;
+      min-height: 30px;
+    }
+  }
 }
 
 .btn__circle {
@@ -79,7 +149,6 @@
   align-items: center;
   min-width: 46px;
   min-height: 46px;
-  margin-left: 30px;
 
   background-color: $color-primary;
   border-radius: 50%;
@@ -87,14 +156,16 @@
   @include vp-767 {
     min-width: 34px;
     min-height: 34px;
-    margin-left: 20px;
   }
 }
 
 .btn__text {
+  margin-right: 30px;
+
   @include vp-767 {
     width: 100%;
     text-align: center;
+    margin-right: 20px;
   }
 }
 
