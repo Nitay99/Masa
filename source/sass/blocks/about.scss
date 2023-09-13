@@ -4,10 +4,12 @@
 
   @include vp-1199 {
     padding-top: 93px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
     padding-top: 62px;
+    padding-bottom: 69px;
   }
 }
 
@@ -137,6 +139,8 @@
 }
 
 .about__desc button {
+  width: 277px;
+
   @include vp-1199 {
     width: 53.2%;
   }

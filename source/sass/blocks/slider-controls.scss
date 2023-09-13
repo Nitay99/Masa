@@ -1,0 +1,70 @@
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+
+  @include vp-1199 {
+    gap: 64px;
+  }
+}
+
+.slider-controls__bar.swiper-scrollbar {
+  height: 2.5px;
+  width: 100%;
+
+  background-color: rgba($color-primary, 0.2);
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.slider-controls__bar.swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: $color-primary;
+  border-radius: 0;
+}
+
+.slider-controls__buttons {
+  display: flex;
+  gap: 10px;
+
+  user-select: none;
+  background-color: $color-additional-back;
+}
+
+.slider-controls__button {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 30px;
+  color: $color-primary;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+  }
+
+  @include active {
+    background-color: $color-default-white;
+    color: rgba($color-primary, 0.7);
+  }
+}
+
+.slider-controls__button.swiper-button-disabled {
+  color: $color-mischka;
+}
+
+.slider-controls__button.swiper-button-prev,
+.slider-controls__button.swiper-button-next {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-top: 0;
+
+  &::after {
+    font-size: 0;
+  }
+}

@@ -161,10 +161,10 @@
 
 .btn__text {
   margin-right: 30px;
+  width: 100%;
+  text-align: center;
 
   @include vp-767 {
-    width: 100%;
-    text-align: center;
     margin-right: 20px;
   }
 }
