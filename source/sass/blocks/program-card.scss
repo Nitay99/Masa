@@ -11,6 +11,14 @@
 
   border-radius: 12px;
   background-color: rgba($color-primary, 0.2);
+
+  @include vp-1199 {
+    border-radius: 4%/3%;
+  }
+
+  @include vp-767 {
+    border-radius: 4.4%/3.1%;
+  }
 }
 
 .program-card__content {
@@ -87,10 +95,12 @@
 
   @include vp-1199 {
     min-height: 420px;
+    border-radius: 4%/3%;
   }
 
   @include vp-767 {
     min-height: 400px;
+    border-radius: 4.4%/3.1%;
   }
 }
 

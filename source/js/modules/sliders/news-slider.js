@@ -1,24 +1,28 @@
 // eslint-disable-next-line
-import Swiper, {Navigation} from '../../vendor/swiper';
+import Swiper, {Navigation, Pagination} from '../../vendor/swiper';
 
-const programSlider = document.querySelector('.programs__slider');
+const sliderNews = document.querySelector('.news__slider');
+// const menu = ['Slide 1', 'Slide 2', 'Slide 3'];
 
-const initProgramSlider = () => {
-  Swiper.use([Navigation]);
+const initSliderNews = () => {
+  Swiper.use([Navigation, Pagination]);
   // eslint-disable-next-line
-  const swiper = new Swiper(programSlider, {
+  const swiper = new Swiper(sliderNews, {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
 
     navigation: {
-      nextEl: '.programs__button-next',
-      prevEl: '.programs__button-prev',
+      nextEl: '.news__button-next',
+      prevEl: '.news__button-prev',
     },
 
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
+    pagination: {
+      el: '.news__pagination',
+			clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + `${index + 1}` + '</span>';
+      },
     },
 
     speed: 250,
@@ -50,4 +54,4 @@ const initProgramSlider = () => {
   });
 };
 
-export {initProgramSlider};
+export {initSliderNews};

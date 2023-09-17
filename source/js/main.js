@@ -5,6 +5,8 @@ import {CustomSelect} from './modules/select/custom-select';
 import {setMenuClickHandler} from './modules/menu';
 import {initHeaderSlider} from './modules/sliders/header-slider';
 import {initProgramSlider} from './modules/sliders/program-slider';
+import {initSliderNews} from './modules/sliders/news-slider';
+import {initAccordions} from './vendor/init-accordion';
 
 // ---------------------------------
 
@@ -12,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-
+  initAccordions();
   iosVhFix();
 
   // Modules
@@ -20,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initHeaderSlider();
   initProgramSlider();
+  initSliderNews();
   setMenuClickHandler();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

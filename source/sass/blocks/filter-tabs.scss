@@ -1,0 +1,38 @@
+.filter-tabs {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  column-gap: 30px;
+}
+
+.filter-tabs__button {
+  background-color: $color-transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-transparent;
+  border-radius: 20px;
+  opacity: 0.6;
+  color: $color-primary;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1em;
+  cursor: pointer;
+
+  padding-top: 14px;
+  padding-right: 26px;
+  padding-bottom: 14px;
+  padding-left: 26px;
+
+  @include hover-focus {
+    opacity: 1;
+  }
+
+  &--active {
+    outline: none;
+    opacity: 1;
+    border-color: $color-primary;
+  }
+}

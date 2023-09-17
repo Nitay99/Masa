@@ -1,0 +1,276 @@
+.accordion {
+  width: 1028px;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.accordion__element {
+  padding-top: 38px;
+  padding-right: 39px;
+  padding-bottom: 24.5px;
+  padding-left: 39px;
+  margin-bottom: 9.7px;
+  min-height: 120px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-primary;
+  border-radius: 16px;
+  background-color: $color-transparent;
+
+  &--two {
+    padding-top: 31px;
+    padding-bottom: 31.5px;
+  }
+
+  &:has(.accordion__button:hover):not(.is-active) {
+    background-color: $color-default-white;
+
+    @include vp-1199 {
+      background-color: $color-transparent;
+    }
+  }
+
+  &:has(.accordion__button:focus-visible):not(.is-active) {
+    background-color: $color-default-white;
+  }
+
+  &:has(.accordion__button:active):not(.is-active) {
+    background-color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    min-height: 100px;
+    padding-top: 28px;
+    padding-right: 29px;
+    padding-bottom: 23px;
+    padding-left: 29px;
+
+    &--two {
+      padding-top: 23.5px;
+    }
+  }
+
+  @include vp-767 {
+    min-height: 80px;
+    padding-top: 18px;
+    padding-right: 14px;
+    padding-bottom: 19px;
+    padding-left: 14px;
+
+    &--two {
+      padding-top: 19px;
+      padding-bottom: 18px;
+    }
+  }
+}
+
+.accordion__element.is-active {
+  background-color: $color-primary;
+
+  padding-bottom: 32px;
+
+  &:has(.accordion__button:active) {
+    background-color: $color-endeavour;
+
+    .accordion__button-icon {
+      background-color: $color-default-white;
+    }
+
+    .accordion__button-icon::before {
+      background-color: $color-endeavour;
+    }
+
+    .accordion__button-icon::after {
+      background-color: $color-transparent;
+    }
+  }
+
+  @include vp-1199 {
+    padding-bottom: 26px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 14px;
+  }
+}
+
+.accordion__element.is-active .accordion__button {
+  color: $color-default-white;
+
+  .accordion__button-icon {
+    background-color: $color-default-white;
+  }
+
+  .accordion__button-icon::before {
+    background-color: $color-primary;
+  }
+
+  .accordion__button-icon::after {
+    background-color: $color-transparent;
+  }
+
+  @include hover-focus {
+    .accordion__button-icon {
+      background-color: $color-transparent;
+      border-color: $color-default-white;
+    }
+
+    .accordion__button-icon::before {
+      background-color: $color-default-white;
+    }
+
+    .accordion__button-icon::after {
+      background-color: $color-transparent;
+    }
+  }
+}
+
+.accordion__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+
+  vertical-align: middle;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 34px;
+  background-color: $color-transparent;
+  color: $color-primary;
+  text-align: start;
+  outline: none;
+
+  @include hover-focus {
+    .accordion__button-icon {
+      background-color: $color-default-white;
+    }
+
+    .accordion__button-icon::before {
+      background-color: $color-primary;
+    }
+
+    .accordion__button-icon::after {
+      background-color: $color-primary;
+    }
+  }
+
+  @include active {
+    color: $color-endeavour;
+
+    .accordion__button-icon {
+      background-color: $color-endeavour;
+    }
+
+    .accordion__button-icon::before {
+      background-color: $color-default-white;
+    }
+
+    .accordion__button-icon::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.accordion__button-title {
+  max-width: 600px;
+
+  @include vp-1199 {
+    max-width: none;
+    width: 85%;
+  }
+
+  &--two {
+    max-width: 560px;
+
+    @include vp-1199 {
+      max-width: none;
+      width: 70%;
+    }
+
+    @include vp-767 {
+      width: 75%;
+    }
+  }
+}
+
+.accordion__button-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-primary;
+  border-radius: 40px;
+  background-color: $color-primary;
+
+  &--two {
+    margin-bottom: 13px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 1px;
+
+    background-color: $color-default-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    transform: rotate(90deg);
+
+    background-color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    &--two {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.accordion__content p {
+  max-width: 640px;
+  margin-top: 13px;
+  margin-bottom: 0;
+
+  color: $color-default-white;
+
+  @include vp-1199 {
+    line-height: 20px;
+
+    max-width: none;
+    width: 90%;
+    margin-top: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+
+    width: 100%;
+    margin-top: 13px;
+  }
+}

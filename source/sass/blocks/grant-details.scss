@@ -95,6 +95,14 @@
   border-radius: 16px;
 
   width: 100%;
+
+  @include vp-1199 {
+    border-radius: 2.6%/4.4%;
+  }
+
+  @include vp-767 {
+    border-radius: 5.8%/8.1%;
+  }
 }
 
 .grant-details__col {
