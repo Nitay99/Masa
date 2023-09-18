@@ -1,0 +1,64 @@
+.reviews {
+  position: relative;
+  padding-top: 115px;
+}
+
+.reviews h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 400;
+  color: $color-primary;
+
+  margin-top: 0;
+  margin-bottom: 45px;
+  padding-left: 3px;
+
+  @include vp-1199 {
+    font-size: 34px;
+
+    padding-left: 0;
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+
+    width: 75%;
+    margin-bottom: 31px;
+  }
+}
+
+.reviews__slider {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 39px;
+  margin-left: auto;
+  width: 86.2%;
+  max-width: 1240px;
+
+  @include vp-1199 {
+    width: 100%;
+    padding-left: 5.86%;
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    width: 90.7%;
+    padding-left: 0;
+  }
+}
+
+.reviews__slide {
+  height: auto;
+}
+
+.reviews__controls {
+  @include vp-767 {
+    position: absolute;
+    top: 114px;
+    right: 4.65%;
+    margin-top: 0;
+    z-index: 2;
+  }
+}

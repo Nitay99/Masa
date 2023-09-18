@@ -5,6 +5,10 @@
   margin-bottom: 0;
   display: flex;
   column-gap: 30px;
+
+  @include vp-1199 {
+    column-gap: 10px;
+  }
 }
 
 .filter-tabs__button {
@@ -21,10 +25,10 @@
   line-height: 1em;
   cursor: pointer;
 
-  padding-top: 14px;
-  padding-right: 26px;
-  padding-bottom: 14px;
-  padding-left: 26px;
+  padding-top: 11.5px;
+  padding-right: 26.5px;
+  padding-bottom: 11.5px;
+  padding-left: 26.5px;
 
   @include hover-focus {
     opacity: 1;

@@ -1,23 +1,23 @@
 // eslint-disable-next-line
 import Swiper, {Navigation} from '../../vendor/swiper';
 
-const programSlider = document.querySelector('.programs__slider');
+const reviewSlider = document.querySelector('.reviews__slider');
 
-const initProgramSlider = () => {
+const initReviewSlider = () => {
   Swiper.use([Navigation]);
   // eslint-disable-next-line
-  const swiper = new Swiper(programSlider, {
+  const swiper = new Swiper(reviewSlider, {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
 
     navigation: {
-      nextEl: '.programs__button-next',
-      prevEl: '.programs__button-prev',
+      nextEl: '.reviews__button-next',
+      prevEl: '.reviews__button-prev',
     },
 
     scrollbar: {
-      el: '.programs__bar',
+      el: '.reviews__bar',
       draggable: true,
     },
 
@@ -31,7 +31,7 @@ const initProgramSlider = () => {
         allowTouchMove: true,
       },
       768: {
-        slidesPerView: 2.13,
+        slidesPerView: 1.278,
         spaceBetween: 30,
         allowTouchMove: true,
         scrollbar: {
@@ -39,7 +39,7 @@ const initProgramSlider = () => {
         },
       },
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 32,
         allowTouchMove: false,
         scrollbar: {
@@ -50,4 +50,4 @@ const initProgramSlider = () => {
   });
 };
 
-export {initProgramSlider};
+export {initReviewSlider};

@@ -6,6 +6,7 @@ import {setMenuClickHandler} from './modules/menu';
 import {initHeaderSlider} from './modules/sliders/header-slider';
 import {initProgramSlider} from './modules/sliders/program-slider';
 import {initSliderNews} from './modules/sliders/news-slider';
+import {initReviewSlider} from './modules/sliders/review-slider';
 import {initAccordions} from './vendor/init-accordion';
 
 // ---------------------------------
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeaderSlider();
   initProgramSlider();
   initSliderNews();
+  initReviewSlider();
   setMenuClickHandler();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

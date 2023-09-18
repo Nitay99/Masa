@@ -1,11 +1,11 @@
 // eslint-disable-next-line
-import Swiper, {Navigation, Pagination} from '../../vendor/swiper';
+import Swiper, {Navigation, Pagination, Grid} from '../../vendor/swiper';
 
 const sliderNews = document.querySelector('.news__slider');
 // const menu = ['Slide 1', 'Slide 2', 'Slide 3'];
 
 const initSliderNews = () => {
-  Swiper.use([Navigation, Pagination]);
+  Swiper.use([Navigation, Pagination, Grid]);
   // eslint-disable-next-line
   const swiper = new Swiper(sliderNews, {
     // Optional parameters
@@ -35,20 +35,18 @@ const initSliderNews = () => {
         allowTouchMove: true,
       },
       768: {
-        slidesPerView: 2.13,
+        slidesPerView: 2,
         spaceBetween: 30,
         allowTouchMove: true,
-        scrollbar: {
-          dragSize: 324,
+        grid: {
+          rows: 2,
+          fill: 'row',
         },
       },
       1200: {
         slidesPerView: 3,
         spaceBetween: 32,
         allowTouchMove: false,
-        scrollbar: {
-          dragSize: 392,
-        },
       },
     },
   });
