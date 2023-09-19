@@ -8,6 +8,7 @@ import {initProgramSlider} from './modules/sliders/program-slider';
 import {initSliderNews} from './modules/sliders/news-slider';
 import {initReviewSlider} from './modules/sliders/review-slider';
 import {initAccordions} from './vendor/init-accordion';
+import './modules/filter-tabs';
 
 // ---------------------------------
 

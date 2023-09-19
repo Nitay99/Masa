@@ -7,7 +7,14 @@
   column-gap: 30px;
 
   @include vp-1199 {
-    column-gap: 10px;
+    column-gap: 8.5px;
+  }
+
+  @include vp-767 {
+    overflow-x: scroll;
+
+    column-gap: 13.5px;
+    padding-bottom: 10px;
   }
 }
 
@@ -38,5 +45,22 @@
     outline: none;
     opacity: 1;
     border-color: $color-primary;
+  }
+
+  @include vp-1199 {
+    max-width: 160px;
+    padding-top: 10.5px;
+    padding-right: 21px;
+    padding-bottom: 10.5px;
+    padding-left: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+
+    padding-top: 8.5px;
+    padding-right: 13px;
+    padding-bottom: 6.5px;
+    padding-left: 14px;
   }
 }
