@@ -56,13 +56,14 @@ const initSliderNews = () => {
     },
   });
 
-  swiper.addSlide(0, newsCareerSlide);
-  swiper.addSlide(0, bigSlide);
+  if (window.innerWidth < 1200) {
+    swiper.addSlide(0, newsCareerSlide);
+    swiper.addSlide(0, bigSlide);
+    swiper.slideTo(0);
+  }
 
   const swiperWrap = sliderNews ? sliderNews.querySelector('.swiper-wrapper') : null;
   const slides = swiperWrap ? swiperWrap.querySelectorAll('.swiper-slide') : null;
-
-  console.log(slides);
 
   slides.forEach((child, i, children) => {
     const count = children.length;

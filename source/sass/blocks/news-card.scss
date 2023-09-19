@@ -9,6 +9,11 @@
 
   @include vp-1199 {
     min-height: 350px;
+    border-radius: 4%/3%;
+  }
+
+  @include vp-767 {
+    border-radius: 4%/4%;
   }
 
   @include only-320 {
@@ -91,12 +96,20 @@
     padding-bottom: 2px;
   }
 
+  &--trip {
+    padding-right: 15px;
+  }
+
   @include vp-1199 {
     width: 87%;
     padding-top: 6px;
 
     &--big {
       padding-top: 4px;
+    }
+
+    &--trip {
+      padding-right: 45px;
     }
   }
 
@@ -128,9 +141,11 @@
 }
 
 .news-card__row {
+  width: 100%;
   position: relative;
   left: -1px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   column-gap: 15px;
   padding-top: 9px;
