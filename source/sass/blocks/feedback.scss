@@ -1,0 +1,22 @@
+.feedback {
+  padding-top: 120px;
+}
+
+.feedback__container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.feedback__img img {
+  height: 803px;
+  object-fit: cover;
+}
+
+.feedback__form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 498px;
+  height: 100%;
+}

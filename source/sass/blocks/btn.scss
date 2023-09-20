@@ -172,3 +172,65 @@
 .btn svg {
   color: $color-default-white;
 }
+
+.btn--additional {
+  width: 100%;
+
+  border-color: $color-default-white;
+  color: $color-default-white;
+
+  @include hover-focus {
+    &:not(:disabled) {
+      background-color: $color-default-white;
+      color: $color-primary;
+
+      .btn__circle {
+        background-color: $color-primary;
+      }
+
+      .btn__circle svg {
+        color: $color-default-white;
+      }
+    }
+
+    &:not(.btn--disabled) {
+      background-color: $color-default-white;
+      color: $color-primary;
+
+      .btn__circle {
+        background-color: $color-primary;
+      }
+
+      .btn__circle svg {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  @include active {
+    &:not(:disabled) {
+      background-color: $color-default-white;
+      color: rgba($color-primary, 0.7);
+
+      .btn__circle {
+        background-color: $color-primary;
+      }
+
+      .btn__circle svg {
+        color: rgba($color-default-white, 0.7);
+      }
+    }
+
+    &:not(.btn--disabled) {
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.btn--additional .btn__circle {
+  background-color: $color-default-white;
+}
+
+.btn--additional .btn__circle svg {
+  color: $color-primary;
+}

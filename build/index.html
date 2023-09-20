@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.">
     <title>Маса</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon/favicon.ico">
     <link rel="preload" href="fonts/manrope-300.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -805,6 +806,50 @@
                     </div>
                   </div>
                 </div>
+                <div class="swiper-slide news__slide news__slide--career">
+                  <div class="news-card">
+                    <div class="news-card__content">
+                      <div class="news-card__time">
+                        <svg class="news-card__icon-angle news-card__icon-angle--top" width="18" height="18" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#angle"></use>
+                        </svg>
+                        <svg class="news-card__icon-angle news-card__icon-angle--bottom" width="18" height="18" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#angle"></use>
+                        </svg>
+                        <time datetime="2023-03-10">10/03/2023</time>
+                      </div>
+                      <div class="news-card__title">
+                        <h3>Построй свою карьеру</h3>
+                        <svg class="news-card__icon-angle news-card__icon-angle--bottom" width="18" height="18" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#angle"></use>
+                        </svg>
+                      </div>
+                      <div class="news-card__row">
+                        <p>Ведущие компании готовы&nbsp;трудоустроить выпускников стажировки</p>
+                        <a class="btn btn--without-text" href="#">
+                          <span class="visually-hidden">Ссылка на страницу всех программ.</span>
+                          <span class="btn__circle">
+                            <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                              <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
+                            </svg>
+                          </span>
+                        </a>
+                        <svg class="news-card__icon-angle news-card__icon-angle--bottom" width="18" height="18" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#angle"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="news-card__img">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 1199px)" srcset="img/jpg/news-slider-photo-4-tablet.webp 1x, img/jpg/news-slider-photo-4-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/jpg/news-slider-photo-4.webp 1x, img/jpg/news-slider-photo-4@2x.webp 2x">
+
+                        <source media="(max-width: 1199px)" srcset="img/jpg/news-slider-photos-4-tablet.jpg 1x, img/jpg/news-slider-photo-4-tablet@2x.jpg 2x">
+                        <img src="img/jpg/news-slider-photo-4.jpg" width="286" height="400" loading="lazy" alt="Фото рабочего стола с руками двух людей за клавиатурой и самртофном, и другими вещами на столе." srcset="img/jpg/news-slider-photo-4@2x.jpg">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="news__slider-controls slider-controls">
                 <div class="news__pagination swiper-pagination"></div>
@@ -989,10 +1034,99 @@
           </div>
         </section>
         <section class="contacts">
+          <div class="container">
+            <div class="contacts__heading">
+              <h2>Контакты</h2>
+              <dl class="contacts__list">
+                <div class="contacts__item">
+                  <dt>Центральный офис</dt>
+                  <dd>г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</dd>
+                </div>
+                <div class="contacts__item">
+                  <dt>Телефон</dt>
+                  <dd><a href="tel:+796387687676">+7 963 876 876 76</a></dd>
+                </div>
+                <div class="contacts__item">
+                  <dt>E-mail</dt>
+                  <dd><a href="mailto:info@masa.ru">Info@masa.ru</a></dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contacts__map" id="contacts-map">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/png/map-mobile.webp 1x, img/png/map-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/png/map-tablet.webp 1x, img/png/map-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/png/map.webp 1x, img/png/map@2x.webp 2x">
 
+                <source media="(max-width: 767)" srcset="img/png/map-mobile.png 1x, img/png/map-mobile@2x.png 2x">
+                <source media="(max-width: 1199px)" srcset="img/png/map-tablet.png 1x, img/png/map-tablet@2x.png 2x">
+                <img src="img/png/map.png" loading="lazy" width="1240" height="500" alt="Карта с указателем на адресе центрального офиса." srcset="img/png/map.png@2x.png">
+              </picture>
+            </div>
+          </div>
         </section>
         <section class="feedback">
+          <div class="container">
+            <div class="feedback__container">
+              <div class="feedback__img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/jpg/faq-photo-tablet.webp 1x, img/jpg/faq-photo-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/jpg/faq-photo.webp 1x, img/jpg/faq-photo@2x.webp 2x">
 
+                  <source media="(max-width: 1199px)" srcset="img/jpg/faq-photo-tablet.jpg 1x, img/jpg/faq-photo-tablet@2x.jpg 2x">
+                  <img src="img/jpg/faq-photo.jpg" loading="lazy" width="1240" height="803" alt="Фото домика на берегу на фоне моря в Тель-Авиве." srcset="img/jpg/faq-photo@2x.jpg">
+                </picture>
+              </div>
+              <div class="feedback__form">
+                <div class="application-form application-form--additional-theme" data-form-validate="" data-callback="base">
+                  <h3>Напишите нам</h3>
+                  <p>Оставьте ваши контакты, если&nbsp;у вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
+                  <form action="https://echo.htmlacademy.ru/" method="post">
+                    <div class="application-form__field application-form__field--additional-theme" data-validate-type="text" data-limitation="name" data-required="">
+                      <input type="text" name="contact" id="name-two" required>
+                      <label for="name-two">Имя</label>
+                    </div>
+                    <div class="application-form__field application-form__field--additional-theme" data-validate-type="phone" data-phone-length="18" data-required="">
+                      <input type="tel-two" name="contact" id="tel" required>
+                      <label for="tel-two">Телефон</label>
+                    </div>
+                    <div class="application-form__select custom-select custom-select--additional-theme" data-validate-type="select" data-select data-required="">
+                      <button id="select-two" class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                        <span class="custom-select__text"></span>
+                        <span class="custom-select__icon"></span>
+                      </button>
+                      <label for="select">Выберите город</label>
+                      <ul class="custom-select__list">
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-1">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-2">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-3">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-4">Санкт-Петербург</li>
+                      </ul>
+                    </div>
+                    <div class="application-form__checkbox checkbox checkbox--additional--theme" data-validate-type="checkbox" data-required="">
+                      <input class="visually-hidden" id="policy-checkbox-two" type="checkbox" name="policy" value="agreement">
+                      <label for="policy-checkbox-two">
+                        <span class="checkbox__icon">
+                          <svg width="10" height="8" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                            <use xlink:href="img/sprite.svg#check-icon"></use>
+                          </svg>
+                        </span>
+                        Я согласен на обработку моих персональных данных
+                      </label>
+                    </div>
+                    <button class="btn btn--additional" type="submit">
+                      <span class="btn__text">отправить</span>
+                      <span class="btn__circle">
+                        <svg width="11" height="12" role="img" aria-hidden="true" focusable="false" fill="currentcolor">
+                          <use xlink:href="img/sprite.svg#arrow-link-icon"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="main-footer">
@@ -1108,6 +1242,7 @@
       </div>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

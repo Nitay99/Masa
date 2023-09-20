@@ -305,3 +305,27 @@
     }
   }
 }
+
+.custom-select--additional-theme .custom-select__icon {
+  background-color: $color-default-white;
+}
+
+.custom-select--additional-theme .custom-select__button {
+  border-color: rgba($color-default-white, 0.3);
+
+  @include hover-focus {
+    border-color: $color-default-white;
+  }
+}
+
+.custom-select--additional-theme.is-open button[type="button"] {
+  border-color: $color-default-white;
+}
+
+.custom-select--additional-theme .custom-select__list {
+  border: 1px solid $color-default-white;
+}
+
+.custom-select--additional-theme .custom-select__text {
+  color: $color-default-white;
+}

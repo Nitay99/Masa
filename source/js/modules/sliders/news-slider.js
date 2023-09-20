@@ -3,6 +3,8 @@ import Swiper, {Navigation, Pagination, Grid, Manipulation} from '../../vendor/s
 
 const sliderNews = document.querySelector('.news__slider');
 const newsCareerSlide = document.querySelector('.news__slide--career');
+const newsTripSlide = document.querySelector('.news__slide--trip');
+const newsVolunteerSlide = document.querySelector('.news__slide--volunteer');
 const bigSlide = document.querySelector('.news__slide--big');
 
 const initSliderNews = () => {
@@ -59,6 +61,8 @@ const initSliderNews = () => {
   if (window.innerWidth < 1200) {
     swiper.addSlide(0, newsCareerSlide);
     swiper.addSlide(0, bigSlide);
+    swiper.addSlide(5, newsTripSlide);
+    swiper.addSlide(5, newsVolunteerSlide);
     swiper.slideTo(0);
   }
 

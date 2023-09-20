@@ -9,6 +9,7 @@ import {initSliderNews} from './modules/sliders/news-slider';
 import {initReviewSlider} from './modules/sliders/review-slider';
 import {initAccordions} from './vendor/init-accordion';
 import './modules/filter-tabs';
+import {initContactsMap} from './modules/contacts-map';
 
 // ---------------------------------
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderNews();
   initReviewSlider();
   setMenuClickHandler();
+  initContactsMap();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

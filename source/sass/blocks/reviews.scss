@@ -1,6 +1,17 @@
 .reviews {
   position: relative;
   padding-top: 115px;
+  padding-bottom: 120px;
+
+  @include vp-1199 {
+    padding-top: 89px;
+    padding-bottom: 101px;
+  }
+
+  @include vp-767 {
+    padding-top: 61px;
+    padding-bottom: 28px;
+  }
 }
 
 .reviews h2 {
@@ -10,7 +21,7 @@
   color: $color-primary;
 
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
   padding-left: 3px;
 
   @include vp-1199 {
@@ -40,7 +51,7 @@
   @include vp-1199 {
     width: 100%;
     padding-left: 5.86%;
-    margin-bottom: 38px;
+    margin-bottom: 39px;
   }
 
   @include vp-767 {
@@ -56,7 +67,7 @@
 .reviews__controls {
   @include vp-767 {
     position: absolute;
-    top: 114px;
+    top: 59px;
     right: 4.65%;
     margin-top: 0;
     z-index: 2;
