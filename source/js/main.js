@@ -8,9 +8,9 @@ import {initProgramSlider} from './modules/sliders/program-slider';
 import {initSliderNews} from './modules/sliders/news-slider';
 import {initReviewSlider} from './modules/sliders/review-slider';
 import {initAccordions} from './vendor/init-accordion';
-import './modules/filter-tabs';
+import {initTabs} from './modules/filter-tabs';
 import {initContactsMap} from './modules/contacts-map';
-import './modules/site-links';
+import {setNavLinksHandler} from './modules/site-links';
 
 // ---------------------------------
 
@@ -29,7 +29,9 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderNews();
   initReviewSlider();
   setMenuClickHandler();
+  initTabs();
   initContactsMap();
+  setNavLinksHandler();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

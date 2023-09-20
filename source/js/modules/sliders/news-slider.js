@@ -69,12 +69,14 @@ const initSliderNews = () => {
   const swiperWrap = sliderNews ? sliderNews.querySelector('.swiper-wrapper') : null;
   const slides = swiperWrap ? swiperWrap.querySelectorAll('.swiper-slide') : null;
 
-  slides.forEach((child, i, children) => {
-    const count = children.length;
-    if (i >= count / 2) {
-      child.classList.add('news__slide--last');
-    }
-  });
+  if (slides) {
+    slides.forEach((child, i, children) => {
+      const count = children.length;
+      if (i >= count / 2) {
+        child.classList.add('news__slide--last');
+      }
+    });
+  }
 };
 
 export {initSliderNews};

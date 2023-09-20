@@ -5,15 +5,11 @@
   width: 100%;
   height: 100%;
 
-  // overflow-x: hidden;
   background-color: rgba(13, 29, 51, 0.4);
 }
 
 body {
   &:has(.dropdown-menu__checkbox:checked:not(.dropdown-menu__checkbox--nojs)) {
-
-    // overflow-y: hidden;
-
     .overlay {
       cursor: pointer;
       display: flex;

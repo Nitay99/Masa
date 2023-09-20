@@ -4,4 +4,12 @@
   display: inline-flex;
   width: 52px;
   height: 52px;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.6;
+  }
 }
