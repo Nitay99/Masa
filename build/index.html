@@ -1080,22 +1080,26 @@
               <div class="feedback__form">
                 <div class="application-form application-form--additional-theme" data-form-validate="" data-callback="base">
                   <h3>Напишите нам</h3>
-                  <p>Оставьте ваши контакты, если&nbsp;у вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
+                  <p>Оставьте ваши контакты, если у вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
                   <form action="https://echo.htmlacademy.ru/" method="post">
                     <div class="application-form__field application-form__field--additional-theme" data-validate-type="text" data-limitation="name" data-required="">
                       <input type="text" name="contact" id="name-two" required>
                       <label for="name-two">Имя</label>
                     </div>
                     <div class="application-form__field application-form__field--additional-theme" data-validate-type="phone" data-phone-length="18" data-required="">
-                      <input type="tel-two" name="contact" id="tel" required>
+                      <input type="tel" name="contact" id="tel-two" required>
                       <label for="tel-two">Телефон</label>
                     </div>
-                    <div class="application-form__select custom-select custom-select--additional-theme" data-validate-type="select" data-select data-required="">
+                    <div class="application-form__field application-form__textarea" data-validate-type="text" data-required>
+                      <textarea name="comment" id="comment-field"></textarea>
+                      <label for="comment-field">Ваше сообщение</label>
+                    </div>
+                    <div class="application-form__select application-form__select--additional-theme custom-select custom-select--additional-theme" data-validate-type="select" data-select data-required="">
                       <button id="select-two" class="custom-select__button" type="button" aria-label="Выберите одну из опций">
                         <span class="custom-select__text"></span>
                         <span class="custom-select__icon"></span>
                       </button>
-                      <label for="select">Выберите город</label>
+                      <label for="select-two">Выберите город</label>
                       <ul class="custom-select__list">
                         <li class="custom-select__item" tabindex="0" data-select-value="id-1">Санкт-Петербург</li>
                         <li class="custom-select__item" tabindex="0" data-select-value="id-2">Санкт-Петербург</li>
@@ -1103,7 +1107,7 @@
                         <li class="custom-select__item" tabindex="0" data-select-value="id-4">Санкт-Петербург</li>
                       </ul>
                     </div>
-                    <div class="application-form__checkbox checkbox checkbox--additional--theme" data-validate-type="checkbox" data-required="">
+                    <div class="application-form__checkbox application-form__checkbox--additional-theme checkbox checkbox--additional-theme" data-validate-type="checkbox" data-required="">
                       <input class="visually-hidden" id="policy-checkbox-two" type="checkbox" name="policy" value="agreement">
                       <label for="policy-checkbox-two">
                         <span class="checkbox__icon">

@@ -15,7 +15,7 @@
   }
 }
 
-.checkbox--additional--theme label {
+.checkbox--additional-theme label {
   color: $color-default-white;
 }
 
@@ -29,7 +29,7 @@
   }
 }
 
-.checkbox--additional--theme input[type="checkbox"]:not(:disabled) ~ label {
+.checkbox--additional-theme input[type="checkbox"]:not(:disabled) ~ label {
   @include hover-focus {
     .checkbox__icon {
       border-color: $color-default-white;
@@ -52,7 +52,7 @@
   border-radius: 2px;
 }
 
-.checkbox--additional--theme .checkbox__icon {
+.checkbox--additional-theme .checkbox__icon {
   border-color: rgba($color-default-white, 0.7);
 }
 
@@ -79,7 +79,7 @@
   }
 }
 
-.checkbox--additional--theme input[type="checkbox"]:checked:not(:disabled) ~ label {
+.checkbox--additional-theme input[type="checkbox"]:checked:not(:disabled) ~ label {
   @include hover-focus {
     .checkbox__icon {
       background-color: $color-transparent;
@@ -95,7 +95,7 @@
   background-color: $color-primary;
 }
 
-.checkbox--additional--theme input[type="checkbox"]:checked ~ label .checkbox__icon {
+.checkbox--additional-theme input[type="checkbox"]:checked ~ label .checkbox__icon {
   background-color: $color-default-white;
 }
 
@@ -103,7 +103,7 @@
   color: $color-default-white;
 }
 
-.checkbox--additional--theme input[type="checkbox"]:checked ~ label .checkbox__icon svg {
+.checkbox--additional-theme input[type="checkbox"]:checked ~ label .checkbox__icon svg {
   color: $color-primary;
 }
 
@@ -112,7 +112,7 @@
   border-color: $color-primary;
 }
 
-.checkbox--additional--theme input[type="checkbox"]:disabled ~ label .checkbox__icon {
+.checkbox--additional-theme input[type="checkbox"]:disabled ~ label .checkbox__icon {
   background-color: rgba($color-default-white, 0.6);
   border-color: $color-default-white;
 }
@@ -122,7 +122,7 @@
   background-color: $color-mischka;
 }
 
-.checkbox--additional--theme input[type="checkbox"]:checked:disabled ~ label .checkbox__icon svg {
+.checkbox--additional-theme input[type="checkbox"]:checked:disabled ~ label .checkbox__icon svg {
   color: $color-default-white;
 }
 

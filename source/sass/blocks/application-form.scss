@@ -9,10 +9,22 @@
   border-radius: 16px;
 
   height: 100%;
-  padding-top: 70px;
+  padding-top: 82px;
   padding-right: 74px;
   padding-bottom: 51px;
   padding-left: 74px;
+
+  @include vp-1199 {
+    padding-top: 61px;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 54px;
+    padding-right: 16px;
+    padding-left: 15px;
+  }
 }
 
 .application-form h3 {
@@ -42,6 +54,12 @@
 .application-form--additional-theme h3 {
   color: $color-default-white;
   text-align: left;
+
+  margin-bottom: 26px;
+
+  @include vp-767 {
+    margin-bottom: 19px;
+  }
 }
 
 .application-form p {
@@ -66,7 +84,18 @@
 }
 
 .application-form--additional-theme p {
+  color: rgba($color-additional-back, 0.9);
   text-align: left;
+
+  @include vp-1199 {
+    margin-bottom: 33px;
+  }
+
+  @include vp-767 {
+    align-self: flex-start;
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .application-form form {
@@ -81,6 +110,10 @@
 
   @include vp-767 {
     margin-bottom: 12px;
+
+    &--additional-theme {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -94,6 +127,17 @@
 
   @include vp-767 {
     margin-bottom: 7px;
+  }
+}
+
+.application-form--additional-theme label {
+  color: rgba($color-additional-back, 0.8);
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+
+    margin-bottom: 12px;
   }
 }
 
@@ -144,21 +188,16 @@
       border-color: $color-default-white;
     }
   }
+
+  @include vp-767 {
+    height: 50px;
+  }
 }
 
 .application-form__field.is-invalid input[name="contact"] {
   border-color: $color-error;
   background-color: rgba($color-error, 0.2);
-
-  ~ label {
-    color: $color-default-dark;
-  }
-}
-
-.application-form__field--additional-theme.is-invalid input[name="contact"] {
-  ~ label {
-    color: $color-default-white;
-  }
+  opacity: 1;
 }
 
 .application-form button[type="submit"] {
@@ -177,6 +216,10 @@
   @include vp-767 {
     margin-bottom: 1px;
   }
+
+  &--additional-theme {
+    margin-bottom: 6.5px;
+  }
 }
 
 .application-form__select.is-open label {
@@ -190,8 +233,56 @@
 .application-form__checkbox {
   margin-bottom: 23px;
 
+  &--additional-theme {
+    margin-bottom: 33px;
+  }
+
   @include vp-767 {
     margin-bottom: 18px;
   }
 }
 
+.application-form__field textarea {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: rgba($color-default-white, 0.3);
+  background-color: $color-primary;
+  color: $color-default-white;
+
+  padding: 15px 25px;
+  height: 98px;
+
+  &:not(:disabled) {
+    @include hover-focus {
+      border-color: $color-default-white;
+      outline: none;
+
+      ~ label {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include vp-767 {
+    height: 93.5px;
+  }
+}
+
+.application-form__field.is-invalid textarea {
+  border-color: $color-error;
+  background-color: rgba($color-error, 0.2);
+  opacity: 1;
+}
+
+.application-form__textarea {
+  margin-bottom: 19.5px;
+
+  @include vp-1199 {
+    margin-bottom: 15.5px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20.5px;
+  }
+}
