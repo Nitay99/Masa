@@ -13,7 +13,6 @@
 .feedback__container {
   position: relative;
   border-radius: 16px;
-  overflow: hidden;
 }
 
 .feedback__img {
@@ -24,7 +23,9 @@
 
 .feedback__img img {
   height: 803px;
+
   object-fit: cover;
+  border-radius: 16px;
 
   @include vp-1199 {
     height: 780px;

@@ -3,6 +3,7 @@ import '../utils/scroll-lock';
 const menu = document.querySelector('.dropdown-menu');
 const checkbox = menu ? menu.querySelector('input') : false;
 const menuLinks = menu ? menu.querySelectorAll('.dropdown-menu__link') : false;
+const submenuButtons = menu ? menu.querySelectorAll('.dropdown-menu__link-with-menu') : false;
 const overlay = document.querySelector('.overlay');
 
 
@@ -45,6 +46,18 @@ const setMenuClickHandler = () => {
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener('click', () => {
         checkbox.checked = false;
+      });
+    });
+  }
+
+  if (submenuButtons) {
+    submenuButtons.forEach((submenuButton) => {
+      submenuButton.addEventListener('click', () => {
+        if (submenuButton.classList.contains('dropdown-menu__link--sublist-active')) {
+          submenuButton.classList.remove('dropdown-menu__link--sublist-active');
+        } else {
+          submenuButton.classList.add('dropdown-menu__link--sublist-active');
+        }
       });
     });
   }

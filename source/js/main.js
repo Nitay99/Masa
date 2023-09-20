@@ -10,6 +10,7 @@ import {initReviewSlider} from './modules/sliders/review-slider';
 import {initAccordions} from './vendor/init-accordion';
 import './modules/filter-tabs';
 import {initContactsMap} from './modules/contacts-map';
+import './modules/site-links';
 
 // ---------------------------------
 
