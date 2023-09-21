@@ -5700,15 +5700,6 @@ body:has(.dropdown-menu__checkbox:checked:not(.dropdown-menu__checkbox--nojs)) .
   border-color: #316dc2;
 }
 
-@media (hover: hover) {
-  .checkbox--additional-theme input[type=checkbox]:not(:disabled) ~ label:hover:not(:active) .checkbox__icon {
-    border-color: #ffffff;
-  }
-}
-.checkbox--additional-theme input[type=checkbox]:not(:disabled) ~ label.focus-visible:focus .checkbox__icon {
-  border-color: #ffffff;
-}
-
 .checkbox__icon {
   margin-right: 10px;
   min-width: 20px;
