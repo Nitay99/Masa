@@ -74,7 +74,7 @@
 }
 
 .news__slide {
-  width: 23%;
+  width: 23.02%;
 }
 
 .news__slide--last .news-card__img img {
@@ -85,12 +85,12 @@
 }
 
 .news__slide--big {
-  width: 48.7%;
+  width: calc(46.04% + 32px);
 }
 
 .news__slider-controls {
   position: relative;
-  margin-top: 40px;
+  margin-top: 41px;
 
   @include vp-1199 {
     margin-top: 30px;

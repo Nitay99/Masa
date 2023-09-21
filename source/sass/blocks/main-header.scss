@@ -104,6 +104,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  @include vp-767 {
+    object-position: 0 25%;
+  }
 }
 
 .main-header__overlay {

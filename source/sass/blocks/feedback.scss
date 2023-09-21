@@ -16,28 +16,35 @@
 }
 
 .feedback__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
   @include vp-767 {
     display: none;
   }
 }
 
 .feedback__img img {
-  height: 803px;
+  min-height: 803px;
+  height: 100%;
 
   object-fit: cover;
   border-radius: 16px;
 
   @include vp-1199 {
-    height: 780px;
+    min-height: 780px;
   }
 }
 
 .feedback__form {
-  position: absolute;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  position: relative;
   width: 498px;
-  height: 100%;
+  // height: 100%;
 
   @include vp-1199 {
     width: 65.2%;

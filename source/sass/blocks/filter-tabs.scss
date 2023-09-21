@@ -36,6 +36,7 @@
   padding-right: 26.5px;
   padding-bottom: 11.5px;
   padding-left: 26.5px;
+  max-width: 170px;
 
   @include hover-focus {
     opacity: 1;
@@ -52,7 +53,7 @@
     padding-top: 10.5px;
     padding-right: 21px;
     padding-bottom: 10.5px;
-    padding-left: 22px;
+    padding-left: 21.5px;
   }
 
   @include vp-767 {

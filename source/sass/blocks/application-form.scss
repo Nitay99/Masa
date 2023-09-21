@@ -17,12 +17,14 @@
   @include vp-1199 {
     padding-top: 61px;
     padding-right: 45px;
+    padding-bottom: 57px;
     padding-left: 45px;
   }
 
   @include vp-767 {
     padding-top: 54px;
     padding-right: 16px;
+    padding-bottom: 50px;
     padding-left: 15px;
   }
 }
@@ -276,7 +278,7 @@
 }
 
 .application-form__textarea {
-  margin-bottom: 19.5px;
+  margin-bottom: 20px;
 
   @include vp-1199 {
     margin-bottom: 15.5px;

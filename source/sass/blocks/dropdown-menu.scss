@@ -49,6 +49,7 @@
   width: 286.5px;
 
   .dropdown-menu__list {
+    top: 4px;
     max-height: 80vh;
     padding-top: 29px;
     padding-right: 25px;
@@ -275,7 +276,7 @@
 
   opacity: 0.8;
   color: $color-default-white;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
 
   @include hover-focus {
     outline: none;
