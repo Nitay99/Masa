@@ -51,14 +51,6 @@
   }
 }
 
-.checkbox--additional-theme input[type="checkbox"]:not(:disabled) ~ label {
-  @include hover-focus {
-    .checkbox__icon {
-      border-color: $color-default-white;
-    }
-  }
-}
-
 .checkbox__icon {
   margin-right: 10px;
   min-width: 20px;
