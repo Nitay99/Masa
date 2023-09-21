@@ -40,12 +40,20 @@ const setMenuClickHandler = () => {
       checkbox.checked = false;
       window.scrollLock.enableScrolling();
     });
+
+    window.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        checkbox.checked = false;
+        window.scrollLock.enableScrolling();
+      }
+    });
   }
 
   if (menuLinks.length >= 1 && menu && checkbox) {
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener('click', () => {
         checkbox.checked = false;
+        window.scrollLock.enableScrolling();
       });
     });
   }

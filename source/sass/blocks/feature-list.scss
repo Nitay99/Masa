@@ -43,7 +43,7 @@
   padding-top: 30px;
   padding-right: 18px;
   padding-bottom: 28px;
-  padding-left: 29px;
+  padding-left: 33px;
 
   border: 1px solid $color-default-white;
   border-radius: 16px;
@@ -52,7 +52,7 @@
   &--additional {
     column-gap: 19px;
     padding-right: 26px;
-    padding-left: 40px;
+    padding-left: 45px;
   }
 
   @include vp-1199 {
@@ -128,7 +128,7 @@
 .feature-list__item p {
   margin-top: 0;
   margin-bottom: 0;
-  width: 44%;
+  width: 45.5%;
 
   font-weight: 300;
   line-height: 20px;

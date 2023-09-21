@@ -15,7 +15,6 @@ import {setNavLinksHandler} from './modules/site-links';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
   initAccordions();

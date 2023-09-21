@@ -2,10 +2,32 @@
   display: flex;
 }
 
+.checkbox input[type="checkbox"]:not(:disabled) {
+  @include hover-focus {
+    ~ label {
+      opacity: 1;
+    }
+
+    .checkbox__icon {
+      border-color: $color-primary;
+    }
+  }
+}
+
+.checkbox--additional-theme input[type="checkbox"]:not(:disabled) ~ label {
+  @include hover-focus {
+    .checkbox__icon {
+      border-color: $color-default-white;
+    }
+  }
+}
+
 .checkbox label {
   font-size: 12px;
   line-height: 1em;
   color: $color-default-dark;
+  cursor: pointer;
+  user-select: none;
 
   display: flex;
   align-items: center;
